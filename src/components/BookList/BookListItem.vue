@@ -6,7 +6,7 @@
         :style="{ backgroundImage: `url(${book.url})` }"
       ></div>
       <div class="card-body">
-        <h5 class="card-title fs-6 fw-bold">{{ book.name }}</h5>
+        <h5 class="card-title fs-6 fw-bold" style="height: 55px;">{{ book.name }}</h5>
         <p class="card-text">{{ book.info }}</p>
         <p class="my-2">
           <i>{{ book.author }}</i>
@@ -23,8 +23,8 @@
         </div>
         <div class="d-flex justify-content-between align-items-center">
           <div class="d-flex align-items-center">
-          <a href="#" class="btn btn-primary">Go read</a>
-          <!-- <router-link to="#">
+          <a href="/src/components/BookInfo/BookInfo.vue" class="btn btn-primary">Go read</a>
+          <!-- <router-link to="../BookInfo/BookInfo.vue">
             <primaryButton>Go read</primaryButton>
           </router-link> -->
           </div>

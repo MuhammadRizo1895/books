@@ -7,14 +7,21 @@
         <div class="col-4 my-3">
           <div class="input-wrap">
             <label for="name">Book name</label>
-            <input
-              type="book-name"
+            <!-- <input
+              type="text"
               id="name"
               placeholder="Book name"
               class="form-control"
               :value="name"
               @input="name = $event.target.value"
-            />
+            /> -->
+            <InputAdd
+              type="text"
+              id="name"
+              placeholder="Book name"
+              :value="name"
+              @input="name = $event.target.value"
+            ></InputAdd>
           </div>
         </div>
         <!-- input author -->
@@ -22,7 +29,7 @@
           <div class="input-wrap">
             <label for="author">The author of the book</label>
             <input
-              type="book-name"
+              type="text"
               id="author"
               placeholder="The author of the book"
               class="form-control"
@@ -67,7 +74,7 @@
             <!-- <label for="url">Book image</label> -->
             <input
               class="form-control"
-              type="link"
+              type="text"
               id="url"
               placeholder="Image URL"
               :value="url"
@@ -109,10 +116,7 @@
           </div>
         </div>
         <div class="col-2 my-3 d-flex align-items-center">
-          <primaryButton
-            type="submit"
-            style="width: 100%"
-            @click="addBook"
+          <primaryButton type="submit" style="width: 100%" @click="addBook"
             >Add
           </primaryButton>
         </div>
@@ -122,7 +126,9 @@
 </template>
 
 <script>
+import InputAdd from "../../globalComponents/InputAdd.vue";
 export default {
+  components: { InputAdd },
   data() {
     return {
       name: "",
